@@ -5,7 +5,7 @@
    	
    	   $token = $_POST["Token"];
 
-   	   $conn = mysqli_connect("localhost","root","","magang");
+   	   $conn = mysqli_connect("localhost","root","","fcm");
 
    	   $query = "INSERT INTO users(Token) values ('$token')ON DUPLICATE KEY UPDATE Token = '$token' ; ";
 
