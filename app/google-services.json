@@ -1,6 +1,40 @@
-
-
-
-
-You must replace this file with your Google-services.json file that you download
-from the  https://console.firebase.google.com/
+{
+  "project_info": {
+    "project_number": "108501451386",
+    "firebase_url": "https://fmctest-bb22d.firebaseio.com",
+    "project_id": "fmctest-bb22d",
+    "storage_bucket": "fmctest-bb22d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108501451386:android:baa17c9e96e8b9fd7d71c3",
+        "android_client_info": {
+          "package_name": "testing.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108501451386-jntcviugfgdbvnu1vmhu43dblc15311n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgI8rJpzLRnu2KSMpIj034SJvYRZcRL2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108501451386-jntcviugfgdbvnu1vmhu43dblc15311n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
