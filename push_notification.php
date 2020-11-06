@@ -1,17 +1,17 @@
 
-<?
+<?php
 
  function send_notification ($tokens, $message)
  {
- 	$url = 'https:magang.googleapis.com/apimagang/send';
+ 	$url = 'https:fcm.googleapis.com/fcm/send';
  	$fields = array(
  	'registration_ids'=> $tokens,
  	'data' => $message 
  	);
 
  	$headers = array(
-    	'Authorization:key = AAAARWb13-0:APA91bFmMOqXs7tnL7hQlkrpWI0B2QSPcLgkpbsbEJcZ9a5poAOe5topalWJh61WX82vNuHNE-nCu2WTDrR-Hsfivw_zGmrzYhxmV-DtxwbgT0h1Og_jPVI2unK5e7wB54spvJUjv_ga',
-    	'content-Type:application/json'
+    	'Authorization:key = AAAAGUMwwno:APA91bHD7ODtwiUG10PJmnm9FJuAhXKnxjGv2qQ1VQjZ8c-DjNV9Og4xtQrkJ3bHtvEBzDSTl7wlmVbvxo2kuUNhBJVVuHPjUwNMy_gLI-bEm-K8dLFXDD-E_N7tuvEsKaY_cazaOe3m',
+    	'Content-Type: application/json'
  	);
 
  	$ch = curl_init();
@@ -22,7 +22,7 @@
  	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
  	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
  	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
- 	$result = curl_exec(ch);
+ 	$result = curl_exec($ch);
  	if($result=== FALSE){
  		die('Curl failed:' .curl_error($ch));
  	}
@@ -31,7 +31,7 @@
  }
 
 
- 	$conn = mysqli_connect("localhost","root","","magang");
+ 	$conn = mysqli_connect("localhost","root","","fcm");
 
  	$sql = "Select Token From users";
 
