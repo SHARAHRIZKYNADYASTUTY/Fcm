@@ -23,15 +23,15 @@ public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
         registerToken(token);
     }
 
-    private void registerToken(String token) {
+    private void registerToken(String token){
 
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
-                .add("Token",token)
+                .add("Token", token)
                 .build();
 
-        Request request = new Request.Builder()
-                .url("http://192.168.1.71/fcm/register.php")
+        Request request  = new Request.Builder()
+                .url("http://192.168.1.71/fcm/register.php/")
                 .post(body)
                 .build();
 
@@ -40,5 +40,7 @@ public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
 }
